@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style/daterangepicker.css">
+    <link rel="stylesheet" href="./style/daterangepicker-kv.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/karher.css">
+
+
+    <script src="./js/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="navbar-aside">
+                <button type="button" class="btn-aside-menu toggle-sidebar">
+                </button>
+            </div>
+            <div class="navbar-user">
+                <div class="user">
+                    <div class="user-wrapper show-user-dropdown">
+                        <div class="icon-user" style="background-image: url(./img/av1.png);"></div>
+                        <div class="user-name">ADMINS</div>
+                    </div>
+                    <div class="dropdown-user">
+                        <ul>
+                            <li>
+                                <a href="#" class="logout">Выход </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="menu-sidebar">
+                <div class="logo">
+                    <a href="#">
+                        <img src="./img/logo.svg" alt="">
+                    </a>
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul class="sidebar-nav treeview-menu">
+                            <li class="active">
+                                <a href="#">Ключевые показатели</a>
+                            </li>
+                            <li>
+                                <a href="#">Сводная информация</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="breadcrumps">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-home"></i> Главная</a> /
+                    </li>
+                    <li>
+                        <span>
+                            Ключевые показатели
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="page-content">
+                <h1 class="page-header">
+                    Ключевые показатели
+                </h1>
+                <form action="#">
+                    <div class="filter-container">
+                        <div class="filter-wrapper">
+                            <div class="filter-box">
+                                <div class="filter-name">
+                                    Регион
+                                </div>
+                                <div class="filter-value">
+                                    <select name="region" class="filter-select">
+                                        <option value="all">Все</option>
+                                        <option value="1">Регион 1</option>
+                                        <option value="2">Регион 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-wrapper">
+                            <div class="filter-box">
+                                <div class="filter-name">
+                                    Город
+                                </div>
+                                <div class="filter-value">
+                                    <select name="region" class="filter-select">
+                                        <option value="all">Все</option>
+                                        <option value="1">Москва</option>
+                                        <option value="2">Питер</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-wrapper">
+                            <div class="filter-box">
+                                <div class="filter-name">
+                                    Номер магазина
+                                </div>
+                                <div class="filter-value">
+                                    <select name="region" class="filter-select">
+                                        <option value="all">Все</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-wrapper">
+                            <div class="filter-box">
+                                <div class="filter-name">
+                                    Размещение QR
+                                </div>
+                                <div class="filter-value">
+                                    <select name="region" class="filter-select">
+                                        <option value="all">Все</option>
+                                        <option value="1">Размещение QR 1</option>
+                                        <option value="2">Размещение QR 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter-wrapper">
+                            <div class="filter-box">
+                                <div class="filter-name">
+                                    Период
+                                </div>
+                                <div class="filter-value">
+                                    <div class="drp-container-selectdata form-group field-filter-date">
+                                        <input type="text" id="filter-date" class="form-control" value="">
+                                        <div class="select-caret"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+                <div class="comments-container">
+                    <div class="comments-box box-yellow text-black">
+                        <div class="icon-col">
+                            <div class="icon-message icon-black"></div>
+                        </div>
+                        <div class="info-col">
+                            <div class="info-label">При оценке 0-6</div>
+                            <div class="info-value">комментариев: 6</div>
+                        </div>
+                    </div>
+                    <div class="comments-box  box-lightgray text-white">
+                        <div class="icon-col">
+                            <div class="icon-message"></div>
+                        </div>
+                        <div class="info-col">
+                            <div class="info-label">При оценке 0-6</div>
+                            <div class="info-value">комментариев: 9</div>
+                        </div>
+                    </div>
+                    <div class="comments-box box-gray text-white">
+                        <div class="icon-col">
+                            <div class="icon-message"></div>
+                        </div>
+                        <div class="info-col">
+                            <div class="info-label">При оценке 9-10</div>
+                            <div class="info-value">комментариев: 13</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="charts-wrapper">
+                    <div class="chart-box">
+                        <div class="box-header">
+                            Подскажите, пожалуйста, насколько вам понравился сегодняшний визит?
+                        </div>
+                        <div class="chart-content">
+                            <div class="pieSimple-flex">
+                                <div class="pieSimple-chart">
+                                    <div class="chart-visit"></div>
+                                </div>
+                                <div class="pieSimple-legend chart-legend">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-header">
+                        Оценка 0-6
+                    </div>
+                    <div class="chart-legend-row dougnat">
+                        <div class="chart-box">
+                            <div class="box-header">
+                                С какими сложностями Вы столкнулись при посещении Kärcher?
+                            </div>
+                            <div class="legend chart-legend">
+                            </div>
+                        </div>
+                        <div class="chart-box">
+                            <div class="chart-content">
+                                <div class="chart-06" data-tooltip="expand"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-box">
+                        <div class="box-header">
+                            Сложности при выборе товара
+                        </div>
+                        <div class="chart-content">
+                            <div class="chart-product"></div>
+                        </div>
+                    </div>
+                    <div class="chart-legend-row">
+                        <div class="chart-box">
+                            <div class="box-header">
+                                Качество обслуживания не оправдало моих ожиданий
+                            </div>
+                            <div class="chart-content">
+                                <div class="radial-wrapper">
+                                    <div class="quality-of-service"></div>
+                                </div>
+                                <div class="legend chart-legend"></div>
+                            </div>
+                        </div>
+                        <div class="chart-box">
+                            <div class="box-header">
+                                Некомфортная атмосфера в магазине
+                            </div>
+                            <div class="chart-content">
+                                <div class="radialLines">
+                                    <div class="chart-atmosphere"></div>
+                                </div>
+                                <div class="legend chart-legend"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-box">
+                        <div class="box-header">
+                            Отношение сотрудников к покупателям
+                        </div>
+                        <div class="chart-content">
+                            Грубое отношение
+                            Незаинтересованность сотрудников в решении моего вопроса
+                            Отсутствие инициативы
+                            Другое
+                        </div>
+                    </div>
+                    <div class="block-header">
+                        Оценка 7- 8
+                    </div>
+                    <div class="chart-legend-row dougnat">
+                        <div class="chart-box">
+                            <div class="box-header">
+                                Что нам стоит улучшить?
+                            </div>
+                            <div class="legend chart-legend">
+                            </div>
+                        </div>
+                        <div class="chart-box">
+                            <div class="chart-content">
+                                <div class="chart-78" data-tooltip="expand"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-header">
+                        Оценка 9 - 10
+                    </div>
+                    <div class="chart-legend-row dougnat">
+                        <div class="chart-box">
+                            <div class="box-header">
+                                Что Вам понравилось больше всего?
+                            </div>
+                            <div class="legend chart-legend">
+                            </div>
+                        </div>
+                        <div class="chart-box">
+                            <div class="chart-content">
+                                <div class="chart-910" data-tooltip="expand"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scrollup">
+        <a href="#" class="text-white"><i class="fa fa-chevron-up"></i></a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="./js/moment.js"></script>
+    <script src="./js/daterangepicker.js"></script>
+    <script src="./js/script.js"></script>
+    
+
+    <!-- charts scirpts -->
+    <script src="./js/Chart.min.js"></script>
+    <script src="./js/jquery.drawPieChart.js"></script>
+    <script src="./js/jquery.drawDoughnutChart.js"></script>
+    <script src="./js/jqueryRadialBarMultiple.js"></script>
+
+    <script>
+        var chartData = new Array();
+        chartData.push({
+            element: '.chart-visit', // класс елемента
+            type: 'pieSimple',               //тип графіка
+            data: [                          //данные графика    
+                {
+                    background: "#FD774E",
+                    progress: "100",
+                    labelText: "Оценка 0-6"
+                },
+                {
+                    background: "#FDEC4F",
+                    progress: "115",
+                    labelText: "Оценка 7-8"
+                },
+                {
+                    background: "#9AFD4E",
+                    progress: "230",
+                    labelText: "Оценка 9-10"
+                }
+            ]
+        });
+        chartData.push({
+            element: '.chart-06', // класс елемента
+            type: 'dougnatSimple',               //тип графіка
+            data: [                          //данные графика    
+                {
+                    background: "#FDEC4F",
+                    progress: "100",
+                    labelText: "Сложности при выборе товара"
+                },
+                {
+                    background: "#DAC92E",
+                    progress: "80",
+                    labelText: "Качество обслуживания не оправдало моих ожиданий"
+                },
+                {
+                    background: "#C4C4C4",
+                    progress: "50",
+                    labelText: "Возникли сложности при осуществлении возврата"
+                },
+                {
+                    background: "#A0A0A0",
+                    progress: "40",
+                    labelText: "Некомфортная атмосфера в магазине"
+                },
+                {
+                    background: "#6E6E6E",
+                    progress: "13",
+                    labelText: "Отношение сотрудников к покупателям"
+                },
+                {
+                    background: "#4B4B4B",
+                    progress: "43",
+                    labelText: "Другое"
+                }
+            ]
+        });
+        chartData.push({
+            element: '.chart-product', // класс елемента
+            type: 'verticalTinyLine',               //тип графіка
+            data: [                          //данные графика    
+                {
+                    progress: "158",
+                    percent: "60",//in percent
+                    labelText: "Маленький ассортимент"
+                },
+                {
+                    progress: "100",
+                    percent: "30",//in percent
+                    labelText: "Слишком большой ассортимент"
+                },
+                {
+                    progress: "20",
+                    percent: "10",//in percent
+                    labelText: "Непонятное расположение товара"
+                },
+                {
+                    progress: "120",
+                    percent: "40",//in percent
+                    labelText: "Нет демонстрационных образцов"
+                },
+                {
+                    progress: "30",
+                    percent: "15",//in percent
+                    labelText: "Нет ценников на товаре"
+                },                {
+                    progress: "12",
+                    percent: "7",//in percent
+                    labelText: "Другое"
+                }
+            ]
+        });
+        chartData.push({
+            element: '.quality-of-service', // класс елемента
+            type: 'radialbar',               //тип графіка
+            data: [                          //данные графика    
+                {
+                    progress: "158",
+                    background: "#FC9299",
+                    labelText: "Некачественное обслуживание на кассе"
+                },
+                {
+                    progress: "100",
+                    background: "#FCC26B",
+                    labelText: "Консультант не обладал нужными знаниями"
+                },
+                {
+                    progress: "20",
+                    background: "#92E0FC",
+                    labelText: "В торговом зале было мало сотрудников"
+                },
+                {
+                    progress: "120",
+                    background: "#C092FC",
+                    labelText: "Некорректная цена на товаре"
+                },
+                {
+                    progress: "30",
+                    background: "#92FCD2",
+                    labelText: "Другое"
+                }
+            ]
+        });
+        chartData.push({
+            element: '.chart-atmosphere', // класс елемента
+            type: 'radialBars',               //тип графіка
+            data: [                          //данные графика    
+                {
+                    progress: "158",
+                    percent: "60",//in percent
+                    background: "#FC9299",
+                    labelText: "Некомфортная температура"
+                },
+                {
+                    progress: "100",
+                    percent: "30",//in percent
+                    background: "#FCC26B",
+                    labelText: "Слишком резкий запах"
+                },
+                {
+                    progress: "20",
+                    percent: "10",//in percent
+                    background: "#92E0FC",
+                    labelText: "Слишком навязчивые сотрудники"
+                },
+                {
+                    progress: "25",
+                    percent: "12",//in percent
+                    background: "#C092FC",
+                    labelText: "Другое"
+                }
+            ]
+        });
+        chartData.push({
+            element: '.chart-78', // класс елемента
+            type: 'dougnatSimple',               //тип графіка
+            data: [                          //данные графика    
+                {
+                    background: "#FDA84F",
+                    progress: "100",
+                    labelText: "Качество товара"
+                },
+                {
+                    background: "#FCCD4E",
+                    progress: "80",
+                    labelText: "Скорость обслуживания"
+                },
+                {
+                    background: "#FDEC4F",
+                    progress: "50",
+                    labelText: "Знания сотрудников"
+                },
+                {
+                    background: "#FEF38D",
+                    progress: "40",
+                    labelText: "Процедуру возврата товара"
+                },
+                {
+                    background: "#C4C4C4",
+                    progress: "13",
+                    labelText: "Расположение магазина"
+                },
+                {
+                    background: "#A0A0A0",
+                    progress: "43",
+                    labelText: "Дизайн и интерьер"
+                },
+                {
+                    background: "#6E6E6E",
+                    progress: "43",
+                    labelText: "Отношение персонала к Клиентам"
+                },
+                {
+                    background: "#4B4B4B",
+                    progress: "43",
+                    labelText: "Ассортимент представленного товара"
+                }
+            ]
+        });
+        chartData.push({
+            element: '.chart-910', // класс елемента
+            type: 'dougnatSimple',               //тип графіка
+            data: [                          //данные графика    
+                {
+                    background: "#FDA84F",
+                    progress: "100",
+                    labelText: "Качество товара"
+                },
+                {
+                    background: "#FCCD4E",
+                    progress: "80",
+                    labelText: "Скорость обслуживания"
+                },
+                {
+                    background: "#FDEC4F",
+                    progress: "50",
+                    labelText: "Компетентность сотрудников"
+                },
+                {
+                    background: "#FEF38D",
+                    progress: "40",
+                    labelText: "Простота возврата товара"
+                },
+                {
+                    background: "#C4C4C4",
+                    progress: "13",
+                    labelText: "Расположение магазина"
+                },
+                {
+                    background: "#A0A0A0",
+                    progress: "43",
+                    labelText: "Стильный дизайн и интерьер"
+                },
+                {
+                    background: "#6E6E6E",
+                    progress: "43",
+                    labelText: "Внимательное отношение персонала к Клиентам"
+                },
+                {
+                    background: "#4B4B4B",
+                    progress: "43",
+                    labelText: "Ассортимент представленного товара"
+                }
+            ]
+        });
+    </script>
+    <script>
+        jQuery(function ($) {
+            $(document).ready(function () {
+                $('.field-filter-date input').daterangepicker({
+                    opens: 'rigth',
+                    locale: {
+                        format: 'DD-MM-YYYY',
+                        applyLabel: 'Принять',
+                        cancelLabel: 'Отмена',
+                        invalidDateLabel: 'Выберите дату',
+                        daysOfWeek: ['Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс', 'Пн'],
+                        monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+                        firstDay: 1
+                    }
+                }, function (start, end, label) {
+                });
+            });
+        });
+    </script>
+
+
+    <!-- !!!!after charts Data!!!! -->
+    <script src="./js/charts.js"></script>
+</body>
+
+</html>

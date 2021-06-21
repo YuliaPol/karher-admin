@@ -636,7 +636,6 @@ $maincolor: #ffe934 ;
         padding-left: 15px;
         padding-right: 15px;
         flex-basis: 25%;
-        min-width: 200px;
         height: 350px;
         .item-box {
             width: 100%;
@@ -695,8 +694,10 @@ $maincolor: #ffe934 ;
                         color: $fontcolor;
                     }
                 }
-                &.line-tooltip:hover {
-                    opacity: 1;
+                &:hover {
+                    .line-tooltip {
+                        opacity: 1;
+                    }
                 }
                 .line-tooltip {
                     background: rgba(201,201,201, 0.7);
@@ -780,7 +781,24 @@ $maincolor: #ffe934 ;
         padding-right: 20px;
     }
 }
+@media screen and (max-width: 1200px) {
+    .vertical-rounded-bars {
+        margin-left: -10px;
+        margin-right: -10px;
+        .item-wrapper {
+            padding-left: 10px;
+            padding-right: 10px;
+            .item-box .label  {
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+    }
+}
 @media screen and (max-width: 1100px) {
+    .vertical-radial-bars .lines-list .line-item .line-tooltip {
+        width: 80px;
+    }
     .page-content .filter-container {
         margin-left: -5px;
         margin-right: -5px;

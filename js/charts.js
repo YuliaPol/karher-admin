@@ -134,6 +134,14 @@ function drawVerticalRoundedBarChart (element, data){
 }
 function drawTinyLineChart (element, data){
     if($(element).length==1 && data.length > 0){
+        var total = 0;
+        for (let i = 0; i < data.length; i++) {
+            total += parseInt(data[i].progress);
+        }
+        var percentRation = 0;
+        if(total > 0) {
+            percentRation = 100/total;
+        }
         var chartHtml = 
             '<div class="vertical-tiny-lines">'
             +'    <div class="scale-list">'
@@ -151,13 +159,14 @@ function drawTinyLineChart (element, data){
             +'  <div class="lines-list-responsive">'
             +'  <div class="lines-list">';
         for (let i = 0; i < data.length; i++) {
+            let percent = Math.round(parseInt(data[i].progress)*percentRation);
             chartHtml += 
                 '<div class="line-item">'
                 +'    <div class="line-wrapper">'
-                +'      <div class="line-value" style="height: ' + data[i].percent +'%;">'
+                +'      <div class="line-value" style="height: ' + percent +'%;">'
                 +'          <div class="line-tooltip">'
                 +'              <div class="tip-cont">'
-                +'                  <div class="value">' + data[i].percent + '% / ' + data[i].progress + 'шт</div>'
+                +'                  <div class="value">' + percent + '% / ' + data[i].progress + 'шт</div>'
                 +'              </div>'
                 +'          </div>'
                 +'      </div>'
@@ -176,6 +185,14 @@ function drawTinyLineChart (element, data){
 }
 function drawRadialBars (element, data){
     if($(element).length==1 && data.length > 0){
+        var total = 0;
+        for (let i = 0; i < data.length; i++) {
+            total += parseInt(data[i].progress);
+        }
+        var percentRation = 0;
+        if(total > 0) {
+            percentRation = 100/total;
+        }
         var chartHtml = 
             '<div class="vertical-radial-bars">'
             +'    <div class="scale-list">'
@@ -192,13 +209,14 @@ function drawRadialBars (element, data){
             +'  </div>'
             +'  <div class="lines-list">';
         for (let i = 0; i < data.length; i++) {
+            let percent = Math.round(parseInt(data[i].progress)*percentRation);
             chartHtml += 
                 '<div class="line-item">'
                 +'    <div class="line-wrapper">'
-                +'      <div class="line-value" style="height: ' + data[i].percent +'%;background: '+ data[i].background + '">'
+                +'      <div class="line-value" style="height: ' + percent +'%;background: '+ data[i].background + '">'
                 +'          <div class="line-tooltip">'
                 +'              <div class="tip-cont">'
-                +'                  <div class="value">' + data[i].percent + '% / ' + data[i].progress + 'шт</div>'
+                +'                  <div class="value">' + percent + '% / ' + data[i].progress + 'шт</div>'
                 +'              </div>'
                 +'          </div>'
                 +'      </div>'

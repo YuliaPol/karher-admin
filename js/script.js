@@ -36,3 +36,7 @@ jQuery(function ($) {
         });
     });
 });
+// preloader
+window.onload = function () {
+    $('.preloader-wrapper').fadeOut();
+}

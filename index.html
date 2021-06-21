@@ -251,10 +251,7 @@
                             Отношение сотрудников к покупателям
                         </div>
                         <div class="chart-content">
-                            Грубое отношение
-                            Незаинтересованность сотрудников в решении моего вопроса
-                            Отсутствие инициативы
-                            Другое
+                            <div class="employees-chart"></div>
                         </div>
                     </div>
                     <div class="block-header">
@@ -554,6 +551,32 @@
                     background: "#4B4B4B",
                     progress: "43",
                     labelText: "Ассортимент представленного товара"
+                }
+            ]
+        });
+        chartData.push({
+            element: '.employees-chart', // класс елемента
+            type: 'verticaclRoundedBars',               //тип графіка
+            data: [                          //данные графика    
+                {
+                    background: "#9299FC",
+                    progress: "100",
+                    labelText: "Грубое отношение"
+                },
+                {
+                    background: "#FCD292",
+                    progress: "80",
+                    labelText: "Незаинтересованность сотрудников в решении моего вопроса"
+                },
+                {
+                    background: "#CEFC92",
+                    progress: "50",
+                    labelText: "Отсутствие инициативы"
+                },
+                {
+                    background: "#FC92E0",
+                    progress: "40",
+                    labelText: "Другое"
                 }
             ]
         });

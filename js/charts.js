@@ -34,6 +34,9 @@ function DrawCharts(chartData){
             if(chartData[i].type == 'verticalTinyLine'){
                 drawTinyLineChart($(chartData[i].element), chartData[i].data);
             }
+            if(chartData[i].type == 'verticaclRoundedBars'){
+                drawVerticalRoundedBarChart($(chartData[i].element), chartData[i].data);
+            }
             if(chartData[i].type == 'radialBars'){
                 drawRadialBars($(chartData[i].element), chartData[i].data);
                 drawRadialLegend($(chartData[i].element), chartData[i].data);
@@ -44,6 +47,87 @@ function DrawCharts(chartData){
             if(chartData[i].type == 'dougnatSimple'){
                 drawDoughnatSimple(chartData[i].element, chartData[i].data);
                 DrawDougnatLegend(chartData[i].element, chartData[i].data);
+            }
+        }
+    }
+}
+function drawVerticalRoundedBarChart (element, data){
+    if($(element).length==1 && data.length > 0){
+        var total = 0;
+        for (let i = 0; i < data.length; i++) {
+            total += parseInt(data[i].progress);
+        }
+        var percentRation = 0;
+        if(total > 0) {
+            percentRation = 100/total;
+        }
+        var chartHtml = 
+            '<div class="vertical-rounded-bars">';
+        for (let i = 0; i < data.length; i++) {
+            let percent = Math.round(parseInt(data[i].progress)*percentRation);
+            let percentMinus = 100 - percent;
+            let addCLass = '';
+            if(percent<10){
+                addCLass += ' low-percent ';
+            }
+            if(percent>80){
+                chartHtml += 
+                '<div class="item-wrapper">'
+                +'    <div class="item-box">'
+                +'      <div class="perecent" style="height: ' + percentMinus + '%;">'
+                +'      </div>'
+                +'      <div class="text with-percent ' + addCLass +'"'
+                +'          style="background: ' + data[i].background +';'
+                +'              height: '+ percent +'%;"'
+                +'          >'
+                +'          <div class="percent-text">'
+                +'              ' + percent + ' %'
+                +'          </div>'
+                +'          <div class="label">'
+                +                data[i].labelText
+                +'          </div>'
+                +'          <div class="line-tooltip">'
+                +'              <div class="tip-cont">'
+                +'                  <div class="value">'+ data[i].progress + 'шт</div>'
+                +'              </div>'
+                +'          </div>'
+                +'      </div>'
+                +'  </div>'
+                +'</div>';
+
+            } else {
+                chartHtml += 
+                '<div class="item-wrapper">'
+                +'    <div class="item-box">'
+                +'      <div class="perecent" style="height: ' + percentMinus + '%;">'
+                +'          <div class="percent-text">'
+                +'              ' + percent + ' %'
+                +'          </div>'
+                +'      </div>'
+                +'      <div class="text ' + addCLass +'"'
+                +'          style="background: ' + data[i].background +';'
+                +'              height: '+ percent +'%;"'
+                +'          >'
+                +'          <div class="label">'
+                +                data[i].labelText
+                +'          </div>'
+                +'          <div class="line-tooltip">'
+                +'              <div class="tip-cont">'
+                +'                  <div class="value">'+ data[i].progress + 'шт</div>'
+                +'              </div>'
+                +'          </div>'
+                +'      </div>'
+                +'  </div>'
+                +'</div>';
+            }
+        }
+        chartHtml += 
+            +'</div>';
+        $(chartHtml).appendTo($(element));
+        let items = $(element).find('.item-box');
+        for (let i = 0; i < items.length; i++) {
+            if($(items[i]).find('.label').innerHeight() > $(items[i]).find('.text').innerHeight()) {
+                $(items[i]).find('.text').addClass('low-percent');
             }
         }
     }
@@ -64,6 +148,7 @@ function drawTinyLineChart (element, data){
             +'      <div class="scale-item"> 20% </div>'
             +'      <div class="scale-item"> 10% </div>'
             +'  </div>'
+            +'  <div class="lines-list-responsive">'
             +'  <div class="lines-list">';
         for (let i = 0; i < data.length; i++) {
             chartHtml += 
@@ -83,6 +168,7 @@ function drawTinyLineChart (element, data){
                 +'</div>';
         }
         chartHtml += 
+            '  </div>'
             '  </div>'
             +'</div>';
         $(chartHtml).appendTo($(element))

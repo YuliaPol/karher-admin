@@ -410,14 +410,14 @@
 
 .pieTip,
 .radialTip {
-  background: rgba(201, 201, 201, 0.7);
+  background: #6E6E6E;
   border-radius: 4px;
   padding: 7px 5px;
   font-family: Arial;
   font-style: normal;
   font-weight: bold;
-  font-size: 10px;
-  line-height: 10px;
+  font-size: 12px;
+  line-height: 12px;
   color: #FFFFFF;
   position: absolute;
   pointer-events: none;
@@ -433,7 +433,7 @@
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid rgba(201, 201, 201, 0.7);
+  border-top: 5px solid #6E6E6E;
   clear: both;
 }
 
@@ -574,13 +574,13 @@
 }
 
 .vertical-tiny-lines .lines-list .line-item .line-tooltip {
-  background: rgba(201, 201, 201, 0.7);
+  background: #6E6E6E;
   border-radius: 4px;
   padding: 7px 5px;
   font-family: Arial;
   font-weight: bold;
-  font-size: 10px;
-  line-height: 10px;
+  font-size: 12px;
+  line-height: 12px;
   color: #FFFFFF;
   position: absolute;
   width: 100px;
@@ -603,7 +603,7 @@
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid rgba(201, 201, 201, 0.7);
+  border-top: 5px solid #6E6E6E;
   clear: both;
 }
 
@@ -751,13 +751,13 @@
 }
 
 .vertical-radial-bars .lines-list .line-item .line-tooltip {
-  background: rgba(201, 201, 201, 0.7);
+  background: #6E6E6E;
   border-radius: 4px;
   padding: 7px 5px;
   font-family: Arial;
   font-weight: bold;
-  font-size: 10px;
-  line-height: 10px;
+  font-size: 12px;
+  line-height: 12px;
   color: #FFFFFF;
   position: absolute;
   width: 100px;
@@ -780,7 +780,7 @@
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid rgba(201, 201, 201, 0.7);
+  border-top: 5px solid #6E6E6E;
   clear: both;
 }
 
@@ -823,21 +823,21 @@
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 12px;
   color: #777676;
   position: absolute;
   pointer-events: none;
 }
 
 .doughnutTipExpand {
-  background: rgba(201, 201, 201, 0.7);
+  background: #6E6E6E;
   border-radius: 4px;
   padding: 7px 5px;
   font-family: Arial;
   font-style: normal;
   font-weight: bold;
-  font-size: 10px;
-  line-height: 10px;
+  font-size: 12px;
+  line-height: 12px;
   color: #FFFFFF;
   position: absolute;
   pointer-events: none;
@@ -852,7 +852,7 @@
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid rgba(201, 201, 201, 0.7);
+  border-top: 5px solid #6E6E6E;
   clear: both;
 }
 
@@ -1009,7 +1009,7 @@
 }
 
 .vertical-rounded-bars .item-wrapper .item-box .text .line-tooltip {
-  background: rgba(201, 201, 201, 0.7);
+  background: #6E6E6E;
   border-radius: 4px;
   padding: 7px 5px;
   font-family: Arial;
@@ -1038,7 +1038,7 @@
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid rgba(201, 201, 201, 0.7);
+  border-top: 5px solid #6E6E6E;
   clear: both;
 }
 

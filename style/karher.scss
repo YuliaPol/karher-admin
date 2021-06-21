@@ -310,14 +310,14 @@ $maincolor: #ffe934 ;
 }
 .pieTip,
 .radialTip {
-    background: rgba(201,201,201, 0.7);
+    background: #6E6E6E;
     border-radius: 4px;
     padding: 7px 5px;
     font-family: Arial;
     font-style: normal;
     font-weight: bold;
-    font-size: 10px;
-    line-height: 10px;
+    font-size: 12px;
+    line-height: 12px;
     color: #FFFFFF;
     position: absolute; 
     pointer-events: none;
@@ -330,7 +330,7 @@ $maincolor: #ffe934 ;
         height: 0;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
-        border-top: 5px solid rgba(201,201,201, 0.7);
+        border-top: 5px solid #6E6E6E;
         clear: both;
     }
     .tip-cont {
@@ -406,13 +406,13 @@ $maincolor: #ffe934 ;
                 }
             }
             .line-tooltip {
-                background: rgba(201,201,201, 0.7);
+                background: #6E6E6E;
                 border-radius: 4px;
                 padding: 7px 5px;
                 font-family: $fontpage;
                 font-weight: bold;
-                font-size: 10px;
-                line-height: 10px;
+                font-size: 12px;
+                line-height: 12px;
                 color: #FFFFFF;
                 position: absolute;
                 width: 100px;
@@ -431,7 +431,7 @@ $maincolor: #ffe934 ;
                     height: 0;
                     border-left: 5px solid transparent;
                     border-right: 5px solid transparent;
-                    border-top: 5px solid rgba(201,201,201, 0.7);
+                    border-top: 5px solid #6E6E6E;
                     clear: both;
                 }
                 .tip-cont {
@@ -520,13 +520,13 @@ $maincolor: #ffe934 ;
                 }
             }
             .line-tooltip {
-                background: rgba(201,201,201, 0.7);
+                background: #6E6E6E;
                 border-radius: 4px;
                 padding: 7px 5px;
                 font-family: $fontpage;
                 font-weight: bold;
-                font-size: 10px;
-                line-height: 10px;
+                font-size: 12px;
+                line-height: 12px;
                 color: #FFFFFF;
                 position: absolute;
                 width: 100px;
@@ -545,7 +545,7 @@ $maincolor: #ffe934 ;
                     height: 0;
                     border-left: 5px solid transparent;
                     border-right: 5px solid transparent;
-                    border-top: 5px solid rgba(201,201,201, 0.7);
+                    border-top: 5px solid #6E6E6E;
                     clear: both;
                 }
                 .tip-cont {
@@ -578,20 +578,20 @@ $maincolor: #ffe934 ;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
-    line-height: 14px;
+    line-height: 12px;
     color: #777676;
     position: absolute;
     pointer-events: none;
 }
 .doughnutTipExpand {
-    background: rgba(201,201,201, 0.7);
+    background: #6E6E6E;
     border-radius: 4px;
     padding: 7px 5px;
     font-family: Arial;
     font-style: normal;
     font-weight: bold;
-    font-size: 10px;
-    line-height: 10px;
+    font-size: 12px;
+    line-height: 12px;
     color: #FFFFFF;
     position: absolute; 
     pointer-events: none;
@@ -604,7 +604,7 @@ $maincolor: #ffe934 ;
         height: 0;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
-        border-top: 5px solid rgba(201,201,201, 0.7);
+        border-top: 5px solid #6E6E6E;
         clear: both;
     }
     .tip-cont {
@@ -700,7 +700,7 @@ $maincolor: #ffe934 ;
                     }
                 }
                 .line-tooltip {
-                    background: rgba(201,201,201, 0.7);
+                    background: #6E6E6E;
                     border-radius: 4px;
                     padding: 7px 5px;
                     font-family: $fontpage;
@@ -725,7 +725,7 @@ $maincolor: #ffe934 ;
                         height: 0;
                         border-left: 5px solid transparent;
                         border-right: 5px solid transparent;
-                        border-top: 5px solid rgba(201,201,201, 0.7);
+                        border-top: 5px solid #6E6E6E;
                         clear: both;
                     }
                     .tip-cont {

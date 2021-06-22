@@ -470,6 +470,13 @@
     <script src="./js/moment.js"></script>
     <script src="./js/daterangepicker.js"></script>
     <script src="./js/script.js"></script>
+    <!-- FILTER SCRIPT  -->
+    <script>
+        $('.content').on('change', '.filter-container select, input', function(e){
+            $(this).parents('form').submit();
+        });
+    </script>
+    <!-- END FILTER SCRIPT  -->
 
     <script>
         jQuery(function ($) {

@@ -315,7 +315,32 @@
     <script src="./js/jquery.drawPieChart.js"></script>
     <script src="./js/jquery.drawDoughnutChart.js"></script>
     <script src="./js/jqueryRadialBarMultiple.js"></script>
-
+    <!-- FILTER SCRIPT  -->
+    <script>
+        $('.content').on('change', '.filter-container select, input', function(e){
+            $(this).parents('form').submit();
+        });
+    </script>
+    <!-- END FILTER SCRIPT  -->
+    <script>
+        jQuery(function ($) {
+            $(document).ready(function () {
+                $('.field-filter-date input').daterangepicker({
+                    opens: 'rigth',
+                    locale: {
+                        format: 'DD-MM-YYYY',
+                        applyLabel: 'Принять',
+                        cancelLabel: 'Отмена',
+                        invalidDateLabel: 'Выберите дату',
+                        daysOfWeek: ['Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс', 'Пн'],
+                        monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+                        firstDay: 1
+                    }
+                }, function (start, end, label) {
+                });
+            });
+        });
+    </script>
     <script>
         var chartData = new Array();
         chartData.push({
@@ -580,27 +605,6 @@
             ]
         });
     </script>
-    <script>
-        jQuery(function ($) {
-            $(document).ready(function () {
-                $('.field-filter-date input').daterangepicker({
-                    opens: 'rigth',
-                    locale: {
-                        format: 'DD-MM-YYYY',
-                        applyLabel: 'Принять',
-                        cancelLabel: 'Отмена',
-                        invalidDateLabel: 'Выберите дату',
-                        daysOfWeek: ['Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс', 'Пн'],
-                        monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
-                        firstDay: 1
-                    }
-                }, function (start, end, label) {
-                });
-            });
-        });
-    </script>
-
-
     <!-- !!!!after chartData!!!! -->
     <script src="./js/charts.js"></script>
 </body>

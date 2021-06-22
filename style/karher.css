@@ -48,7 +48,7 @@
 .page-content .filter-container .filter-wrapper .filter-box {
   background: #FFFFFF;
   width: 100%;
-  padding: 10px 15px;
+  padding: 10px 0px;
 }
 
 .page-content .filter-container .filter-wrapper .filter-box .filter-name {
@@ -57,11 +57,13 @@
   line-height: 16px;
   color: #000000;
   padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .page-content .filter-container .filter-wrapper .filter-box .select2-container--default .select2-selection--single .select2-selection__rendered {
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
   color: #C1C1C2;
   font-size: 13px;
   line-height: 15px;
@@ -80,6 +82,7 @@
 
 .page-content .filter-container .filter-wrapper .filter-box .select2-container .select2-selection--single .select2-selection__arrow {
   height: 14px;
+  right: 15px;
 }
 
 .page-content .filter-container .filter-wrapper .filter-box .select2-container .select2-selection--single .select2-selection__arrow b {
@@ -102,6 +105,8 @@
 
 .page-content .filter-container .filter-wrapper .filter-box .field-filter-date {
   position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .page-content .filter-container .filter-wrapper .filter-box .field-filter-date .form-control {
@@ -121,7 +126,7 @@
 .page-content .filter-container .filter-wrapper .filter-box .field-filter-date .select-caret {
   position: absolute;
   top: 5px;
-  right: 1px;
+  right: 15px;
   background: url(./../img/arrow-yellow.svg);
   width: 15px;
   height: 10px;
@@ -1695,6 +1700,12 @@ ul.pagination .next a {
   width: 20px;
   display: inline-block;
   margin-right: 3px;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  outline: none;
+  border-radius: 0px;
+  border-color: #6E6E6E;
 }
 
 @media screen and (max-width: 1400px) {

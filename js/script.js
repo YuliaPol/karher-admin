@@ -31,7 +31,7 @@ jQuery(function ($) {
         });
 
         $('.filter-select').select2({
-            minimumResultsForSearch: Infinity,
+            // minimumResultsForSearch: Infinity,
             width: '.filter-box'
         });
     });

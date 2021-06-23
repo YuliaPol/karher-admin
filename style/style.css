@@ -409,7 +409,7 @@ body {
   margin-left: 260px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  background-color: #E5E5E5;
+  background-color: #F2F2F2;
   margin-top: 70px;
   min-height: calc(100vh - 70px);
 }
@@ -424,7 +424,7 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 35px;
-  border-bottom: 1px solid #E5E5E5;
+  border-bottom: 1px solid #F2F2F2;
 }
 
 .container .content .header-page h1 {
@@ -516,7 +516,7 @@ body {
 
 .page-content {
   width: 100%;
-  background: #E5E5E5;
+  background: #F2F2F2;
   max-width: 100%;
 }
 
